@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="../static/form.css" >
 </head>
 <body>
-    <h1 class="center">This is my form page</h1>
+    <h1 style="text-align: center;">This is my form page</h1>
     <form>
         <label for="name">Name: </label>
         <input required id="name" style="width: 200px">
-        <br>
+
         <label for="email">Email: </label>
         <input required id="email" style="width: 200px">
-        <br>
-        <label for="male">Male: </label>
-        <input type="radio" id="male" name="gender">
-        <label for="female">Female: </label>
-        <input type="radio" id="female", name="gender">
-        <br>
+
+        <div class="gender_group">
+            <label for="male">Male: </label>
+            <input type="radio" id="male" name="gender">
+            <label for="female">Female: </label>
+            <input type="radio" id="female" name="gender">
+        </div>
+
         <label for="birthdate">Birthdate: </label>
         <input type="date" id="birthdate" style="width: 200px;">
-        <br>
+
         <input type="submit" value="Submit">
     </form>
 </body>
