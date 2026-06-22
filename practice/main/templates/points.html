@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <!-- Keep your existing Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-light py-5">
+
+    <div class="container" style="max-width: 500px;">
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4 text-center">
+                
+                <!-- Score Display -->
+                <p class="text-muted text-uppercase small fw-bold mb-1">Average Score</p>
+                <h1 class="display-3 fw-bold text-primary mb-3">{{points}}</h1>
+
+                <!-- Conditional Feedback Badge -->
+                {% if points > 9 %}
+                <div class="alert alert-success d-inline-block py-1 px-3 mb-4 rounded-pill" role="alert">
+                    ✨ Very good
+                </div>
+                {% endif %}
+
+                <hr class="my-4 opacity-25">
+
+                <!-- Subjects Section -->
+                <h6 class="text-start mb-3 fw-semibold text-secondary">Enrolled Subjects</h6>
+                <div class="d-flex flex-wrap gap-2 justify-content-start">
+                    {% for subject in subjects %}
+                    <span class="badge bg-secondary-subtle text-secondary-emphasis px-3 py-2 fs-6 border border-secondary-subtle">
+                        {{subject}}
+                    </span>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

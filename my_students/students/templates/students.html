@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Students</h1>
+    <ul>
+        {% for student in students %}
+        <li>
+            <p>{{ student.name }}</p>
+            {% if student.age < 18 %}
+            <p style="color: red;">You are under 18</p>
+            {% else %}
+            <p style="color: green;">You are over 18</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+<!-- danh sách sản phẩm (tên, giá) giá lớn 500: đắt ngược lại là :rẻ 
+tên, tuổi, danh sách kỹ năng, nếu >=18 'trưởng thành', nếu không có kỹ năng -> 'chưa có kỹ năng' -->

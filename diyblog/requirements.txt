@@ -1,0 +1,8 @@
+asgiref
+asgiref-3.11.1.dist-info
+django
+django-6.0.3.dist-info
+sqlparse
+sqlparse-0.5.5.dist-info
+tzdata
+tzdata-2025.3.dist-info

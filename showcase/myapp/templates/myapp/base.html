@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Instagram Bootstrap Pure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-light">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 d-none d-md-flex flex-column align-items-center border-end vh-100 py-4 gap-4">
+          <a href="{% url 'home' %}" class="text-decoration-none text-dark">
+            <i class="bi bi-instagram fs-3"></i>
+          </a>
+          <a href="{% url 'home' %}" class="text-decoration-none text-dark">
+            <i class="bi bi-house fs-4"></i>
+          </a>
+          <i class="bi bi-search fs-4" style="cursor: pointer;"></i>
+          <i class="bi bi-play fs-4" style="cursor: pointer;"></i>
+          <i class="bi bi-chat fs-4" style="cursor: pointer;"></i>
+          <i class="bi bi-heart fs-4" style="cursor: pointer;"></i>
+          <i class="bi bi-plus-square fs-4" style="cursor: pointer;"></i>
+          <a href="{% url 'profile' %}" class="text-decoration-none text-dark">
+            <i class="bi bi-person-circle fs-4"></i>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-12 mx-auto py-3">
+          {% block content %} {% endblock %}
+        </div>
+
+        {% if not hide_sidebar %}
+        <div class="col-3 d-none d-lg-block py-4">
+          
+          <a href="" class="text-decoration-none text-dark">
+            <div class="d-flex align-items-center mb-3">
+              <img src="" class="rounded-circle me-2" width="40" height="40" style="object-fit: cover;" onerror="this.src='https://i.pravatar.cc/40'"/>
+              <div>
+                <b></b><br />
+                <small class="text-muted"></small>
+              </div>
+            </div>
+          </a>
+          
+
+          <div class="d-flex justify-content-between mb-2">
+            <b class="text-muted">Gợi ý cho bạn</b>
+            <small class="fw-bold">Xem tất cả</small>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="d-flex align-items-center">
+              <img src="https://i.pravatar.cc/30?img=1" class="rounded-circle me-2" width="32" height="32" />
+              <small class="fw-bold">nguoidung_moi</small>
+            </div>
+            <span class="text-primary fw-bold" style="font-size: 12px; cursor: pointer;">Theo dõi</span>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="d-flex align-items-center">
+              <img src="https://i.pravatar.cc/30?img=2" class="rounded-circle me-2" width="32" height="32" />
+              <small class="fw-bold">coding_hocsinh</small>
+            </div>
+            <span class="text-primary fw-bold" style="font-size: 12px; cursor: pointer;">Theo dõi</span>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>

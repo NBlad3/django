@@ -1,0 +1,105 @@
+{% extends "myapp/base.html" %}
+
+{% block content %}
+<div class="container mt-4" style="max-width: 900px;">
+
+  <div class="row align-items-center mb-4">
+    
+    <div class="col-4 text-center">
+      <img src="" 
+           class="rounded-circle"
+           style="width: 150px; height: 150px; object-fit: cover;"
+           onerror="this.src='https://i.pravatar.cc/150'">
+    </div>
+
+    <div class="col-8">
+      
+      <div class="d-flex align-items-center gap-3 mb-3">
+        <h4 class="mb-0"></h4>
+        <button class="btn btn-light border fw-bold px-3">Edit profile</button>
+        <button class="btn btn-light border fw-bold px-3">View archive</button>
+      </div>
+
+      <div class="d-flex gap-4 mb-3">
+        <span><b></b> posts</span>
+        <span><b></b> followers</span>
+        <span><b></b> following</span>
+      </div>
+
+      <div>
+        <b></b><br>
+        <p class="text-dark"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="d-flex gap-4 mb-4">
+    <div class="text-center">
+      <div class="border rounded-circle d-flex align-items-center justify-content-center bg-white"
+           style="width: 75px; height: 75px; cursor: pointer;">
+        <span style="font-size: 30px;" class="text-muted">+</span>
+      </div>
+      <small class="fw-bold">New</small>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs justify-content-center mb-3 border-top">
+    <li class="nav-item">
+      <a class="nav-link active border-top border-dark rounded-0 bg-transparent text-dark fw-bold" style="margin-top: -1px;">
+        <i class="bi bi-grid-3x3 me-1"></i> POSTS
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-muted"><i class="bi bi-play-btn me-1"></i> REELS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-muted"><i class="bi bi-person-square me-1"></i> TAGGED</a>
+    </li>
+  </ul>
+
+  <div class="row g-1">
+    <div class="col-4">
+      <div class="position-relative">
+        <img src="" class="w-100 post-img">
+
+        <div class="overlay d-flex justify-content-center align-items-center">
+          <span class="text-white fw-bold me-3"><i class="bi bi-heart-fill"></i> 10</span>
+          <span class="text-white fw-bold"><i class="bi bi-chat-fill"></i> 5</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 text-center py-5">
+        <i class="bi bi-camera fs-1 text-muted"></i>
+        <p class="text-muted">No posts yet</p>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.post-img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.position-relative:hover .overlay {
+  opacity: 1;
+}
+
+.nav-tabs .nav-link { border: none; font-size: 12px; letter-spacing: 1px; }
+</style>
+
+{% endblock %}
